@@ -1,0 +1,40 @@
+{
+  "name": "tontube",
+  "version": "1.0.0",
+  "description": "C'est le tube de votre vie !",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha tests/*/*.js",
+    "start": "node server.js",
+    "build": "webpack --config webpack.prod.js",
+    "dev-start": "webpack --config webpack.config.js --debug && webpack-dev-server --open --content-base src/ --inline --hot --port 4000 --history-api-fallback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oScape/tontube.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oScape/tontube/issues"
+  },
+  "homepage": "https://github.com/oScape/tontube#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "dotenv": "^4.0.0",
+    "mongoose": "^4.13.6",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "devDependencies": {
+    "express": "^4.16.2"
+  }
+}
