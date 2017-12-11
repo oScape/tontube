@@ -14,15 +14,12 @@ const User = require('./models/users');
 //    .then(x => console.log('Connected to db: ' + x.name))
 //    .catch(err => console.log(err));
 
-app.use('/app', express.static(path.join(__dirname + '/dist/app')));
+app.use('/app', express.static(path.join(__dirname + '/dist')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/src/index.html'));
+    res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 // Run server
 const port = process.env.PORT || 4430;
 app.listen(port, () => console.log('Server listening on: ' + port));
-
-
-

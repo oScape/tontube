@@ -7,7 +7,7 @@
     "test": "mocha tests/*/*.js",
     "start": "node server.js",
     "build": "webpack --config webpack.prod.js",
-    "dev-start": "webpack --config webpack.config.js --debug && webpack-dev-server --open --content-base src/ --inline --hot --port 4000 --history-api-fallback"
+    "dev-start": "webpack --config webpack.config.js --debug && webpack-dev-server --open --content-base public/ --inline --hot --port 4000 --history-api-fallback"
   },
   "repository": {
     "type": "git",

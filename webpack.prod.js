@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src') + '/app/index.js',
+    entry: path.resolve(__dirname, '/src/index.js'),
 
     devtool: 'source-map',
     plugins: [
