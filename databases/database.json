@@ -1,0 +1,24 @@
+{
+    "youtubers": [{
+        "id": "830315e0-f4cd-11e7-804b-c1737b9ff2a5",
+        "name": "Norman fait des videos",
+        "category": "c1cd6a10-f4cd-11e7-927f-e7b5766c7eb6",
+        "videos": [{
+            "id": "some-id-video1"
+        },{
+            "id": "some-id-video2"
+        }]
+    },{
+        "id": "some-id",
+        "name": "Some name",
+        "category": "c1cd6a10-f4cd-11e7-927f-e7b5766c7eb6",
+        "videos": []
+    }],
+    "categories": [{
+        "id": "c0cd6a10-f4cd-11e7-927f-e7b5766c7eb6",
+        "name": "Fun"
+    }, {
+        "id": "some-categories-id", 
+        "name": "History"
+    }]
+}

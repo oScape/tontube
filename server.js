@@ -5,9 +5,11 @@ const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 
-const app = express();
-
+const BDD = require('./lib/wrapperDatabases').get();
+const port = process.env.PORT || 4430;
 const User = require('./models/users');
+
+const app = express();
 
 // connect to mongodb
 //mongoose.Promise = global.Promise;
@@ -17,10 +19,17 @@ const User = require('./models/users');
 
 app.use('/app', express.static(path.join(__dirname + '/dist')));
 
+app.get('/api/youtubers', (req, res) => {
+    res.send(BDD.youtubers);
+});
+
+app.get('/api/categories', (req, res) => {
+    res.send(BDD.categories);
+});
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 // Run server
-const port = process.env.PORT || 4430;
-app.listen(port, () => console.log('Server listening on: ' + port));
+module.exports =  app.listen(port, () => console.log('Server listening on: ' + port));
